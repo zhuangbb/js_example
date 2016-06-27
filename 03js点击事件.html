@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+         
+        </style>
+    </head>
+    <body>
+        <button id="btn">进来</button>
+        <script type="text/javascript">
+            var btn = document.getElementById("btn");
+            btn.addEventListener("mouseover", function01);
+            btn.addEventListener("click", function02);
+            btn.addEventListener("mouseout", function03);
+
+            function function01(){
+                btn.innerHTML = "点我";
+            }
+            function function02(){
+                btn.innerHTML = "离开";
+            }
+            function function03(){
+                btn.innerHTML = "进来";
+            }
+        </script>
+    </body>
+</html>

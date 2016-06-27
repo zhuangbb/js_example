@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            function Person (name,age,job) {
+                this.name = name;
+                this.age = age;
+                this.job = job;
+                // this.getName = function(){
+                //     return this.name;
+                // }
+            }
+            var per1 = new Person('jack',18,"engineer");
+            delete(per1.age)
+            alert(per1.age)
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

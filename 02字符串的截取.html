@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body onload="load()">
+        <script type="text/javascript">
+            function load(){
+                var Str = "/content/m/img/ok.png";
+                
+                var Str1 = Str.substr(Str.lastIndexOf("/")+1);//substr表示截取从索引为2开始，连续截取后面两个(第二个参数)字符串
+                // var Str0 = (Str.substring(1,4));//substring 表示截取的是索引为1开始，为4结束，但不包括4
+                // var Str2 = Str.indexOf("8");//获取8在变量中的第一个索引
+                // var mail = "2665937165@qq.com";
+                // var str3 = mail.indexOf("@");//先获取@的索引
+                // var len = mail.length;//获取mail的长度
+                // var str4 = (mail.substring(str3+1,len));
+                alert(Str1);
+            }
+        </script>
+    </body>
+</html>

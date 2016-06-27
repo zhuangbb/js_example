@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        *{margin: 0; padding: 0; list-style:none;}
+        
+            .box{
+                width: 900px;
+                height: 300px;
+                margin: 0 auto;
+            }
+            p{
+                width: 250px;
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                border: 1px solid #f40;
+                margin: 0 auto;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+            ul{
+                height: 210px;
+            }
+            li{
+                font-size: 20px;
+                width: 100px;
+                height: 100px;
+                float: left;
+                border: 1px solid #ccc;
+                margin: 20px;
+                /*line-height: 100px;*/
+                text-align: center;   
+            }
+        </style>
+      
+    </head>
+    <body>
+        <div class="box">
+            <p id="p1">changeColor-rgb(xxx,xxx,xxx)</p>
+            <ul>
+                <li class="Col"></li>
+                <li class="Col"></li>
+                <li class="Col"></li>
+                <li class="Col"></li>
+                <li class="Col"></li>
+                <li class="Col"></li>
+            </ul>
+
+             <p id="p2">changeColor-#xxxxxx</p>
+            <ul>
+                <li class="Col2"></li>
+                <li class="Col2"></li>
+                <li class="Col2"></li>
+                <li class="Col2"></li>
+                <li class="Col2"></li>
+                <li class="Col2"></li>
+            </ul>
+        </div>
+    </body>
+      <script type="text/javascript">
+           function GetColor1(){
+                var rgb = 'rgb('+Math.floor(Math.random()*255)+','+Math.floor(Math.random()*255)+','+Math.floor(Math.random()*255)+')';
+                console.log(rgb);
+                return rgb;
+           }
+           var btn1 = document.querySelector("#p1");
+           var List01 = document.querySelectorAll(".Col");
+           btn1.onclick = function(){
+                for (var i = 0; i < List01.length; i++) {
+                    List01[i].style.background = GetColor1();
+                }
+           }
+        </script>
+</html>

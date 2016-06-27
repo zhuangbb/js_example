@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+       <style type="text/css">
+       .box{
+        width: 500px;
+        height: 800px;
+        background-color: #fcf;
+        margin: 0 auto;
+       }
+        #btn{
+        
+        }
+       </style>
+    </head>
+    <body onload="load()">
+        <div class="box">
+            <span>请选择您的生日:</span><input type="Date" id="inp" />
+            <button id="btn">测试一下</button>
+            <span id="show"></span>
+        </div>
+        <script type="text/javascript">
+            function load(){
+                var btn = document.getElementById("btn");
+                var inputvalue = document.getElementById("inp")
+                var sp = document.getElementById("show")
+                btn.onclick = function(){
+                    // alert(inputvalue.value);
+                    var today = new Date();
+                    var curDate = today.getFullYear() + "-" + (today.getMonth()+1) +"-" + today.getDate();
+                    var birth = inputvalue.value;
+                    console.log("birth=" + birth);
+                    console.log("today=" + today);
+                    console.log("curDate=" + curDate);
+                    // var today01 = new Date(curDate);
+                    // var today02 = new Date(birth);
+                    var count = Math.ceil(((today - new Date(birth))/(60*60*24*1000)));
+                    // sp.innerHTML = "你活了" + count + "天";
+                    if(count > 8000){
+                    sp.innerHTML = "你活了" + count + "天";
+                    }else if(count == NaN || count == undefined){
+                        sp.innerHTML = "请选择您的生日"
+                    }
+                    else{
+                    sp.innerHTML = "你才活了" + count + "天";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

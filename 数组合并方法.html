@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+        <script type="text/javascript">
+                // Array.prototype.quchong = function(){
+                    // this.sort()
+                    // var res = [this[0]];
+                    // for (var i = 1; i < this.length; i++) {
+                    //     if(this[i] != res[res.length - 1]){
+                    //         res.push(this[i]);
+                    //     }
+                    // }
+                    // return res;
+                    //第二种方法 去重但是不排序
+                //     var n = [this[0]];
+                //     for (var i = 1; i < this.length; i++) {
+                //         if(this.indexOf(this[i]) == i) n.push(this[i]);
+                //     }
+                //     return n;
+                // }
+                // var arr01 = [7,5,6,1,2,3,7,7,7,7],
+                // arr02 = [7,8,9,9,0];
+               
+                // var arr03 = arr01.concat(arr02);
+                // alert(arr03.quchong());
+
+
+                // 数组排序方法
+              //   var arr04 = [8,5,9,6,2,5,8,9];
+
+              //   function fnsort(a,b){
+              //       return a-b;
+              //   }
+              //   document.write(arr04.sort(fnsort));
+
+              //   function account(a,b,c){
+              //       return s = a*18.5+b*22.5+c*45;
+              //   }
+              // account(1,0,0);
+              // alert(s)
+
+               // jquery版本
+               var arr = [0,2,5,3,2,100,150];
+               var new_arr = [];
+               for (var i = 0; i<arr.length; i++) {
+                    var items = arr[i];
+                    // 判断元素是否在数组中，如果不存在就插入到新的数组中
+                    if($.inArray(items, new_arr) == -1){
+                        new_arr.push(items);
+                    }
+                }
+                alert(new_arr.sort());
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

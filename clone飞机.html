@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var plane = function(){
+                // plane.blood = "";
+                // plane.attackLevel ="";
+                // plane.defenseLevel = "";
+            } 
+            var planeMin = new plane();
+            planeMin.blood = 500;
+            planeMin.attackLevel = 300;
+            planeMin.defenseLevel = 200;
+
+            var cloneplane = Object.create(planeMin);
+            console.log(cloneplane);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            function newtime(time){
+                var data = new Date(time*1000);
+                Y = data.getFullYear()+'-';
+                M = (data.getMonth() +1 <10 ? '0' + (data.getMonth()+1):data.getMonth()+1)+'-';
+                D = data.getDate();
+                h = data.getHours();
+                m = data.getMinutes();
+                s = data.getSeconds();
+                var timer = Y+M+D+h+m+s;
+                alert(timer)
+                return timer;
+            }
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

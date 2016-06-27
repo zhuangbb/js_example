@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            function cl (x) {
+                return console.log(x);
+            }
+            var googleMap = {
+                show:function(){
+                    cl("开始渲染谷歌地图");
+                }
+            }
+            var baiduMap = {
+                show:function(){
+                    cl("开始渲染百度地图");
+                }
+            }
+            var sosoMap = {
+                show:function(){
+                    cl("开始渲染搜搜地图");
+                }
+            }
+            // 公用函数方法
+            var renderMap = function(map){
+                if(map.show instanceof Function){
+                    map.show();
+                }
+            }
+            renderMap(googleMap);
+            renderMap(baiduMap);
+            renderMap(sosoMap);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

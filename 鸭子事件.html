@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var duck = {
+                ducksounds:function(){
+                    consolo.log("嘎嘎嘎");
+                }
+            };
+            var chicken = {
+                ducksounds:function(){
+                    cosole.log("嘎嘎嘎");
+                }
+            };
+            var hechang = [];//合唱团
+            var joins = function(animal){
+                if(animal && typeof animal.ducksounds === "function"){
+                    hechang.push(animal);
+                    console.log("加入合唱成功");
+                    console.log("合唱数量="+hechang.length);
+                }
+            };
+            joins(duck);
+            joins(chicken);
+            joins(chicken);
+
+        </script>
+    </head>
+    <body>
+        <!-- 面向对象的方法
+             具有相同函数功能的一些方法的集合
+        -->
+    </body>
+</html>

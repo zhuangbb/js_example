@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var obj = {
+                a:{w:1,e:2,r:3},
+                b:{ssa:4,df:5,gh:6},
+                c:{ss:6,bn:7,md:8}
+            }
+            function fn (s) {
+                for (var i in s) {
+                    if(typeof s[i] == "object"){
+                        fn(s[i]);
+                    }else{
+                        console.log(s[i]);
+                    }
+                }
+            }
+            fn(obj);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
